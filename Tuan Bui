@@ -19,10 +19,12 @@
 #define POWER_CONTROL 0x2F
 
 #define swap(a,b) {uint8_t t =a; a =b; b =t;}
-
+/*
+ see LCD mapping for correct pin input
+*/
 class homephone: public Print{
 	public:
-	homephone(int8_t sdin, int8_t slk, int8_t a, int8_t rst, int8_t cs): sdin (sdin), slk(slk), a(a), rst(rst), cs(cs){}
+	homephone(int8_t sda, int8_t sck, int8_t ad, int8_t rst, int8_t cs): sdin (sdin), slk(slk), a(a), rst(rst), cs(cs){}
 	//homephone(uint8_t sdin, uint8_t slk, uint8_t a,uint8_t rst, uint8_t cs);
 	void lcdWrite(uint8_t command, byte c);
 	void begin(void);
