@@ -24,7 +24,7 @@
 */
 class homephone: public Print{
 	public:
-	homephone(int8_t sda, int8_t sck, int8_t ad, int8_t rst, int8_t cs): sdin (sda), slk(sck), a(ad), rst(rst), cs(cs){}
+	homephone(int8_t sda, int8_t sck, int8_t a0, int8_t rst, int8_t cs): sdin (sda), slk(sck), a(ad), rst(rst), cs(cs){}
 	//homephone(uint8_t sdin, uint8_t slk, uint8_t a,uint8_t rst, uint8_t cs);
 	void lcdWrite(uint8_t command, byte c);
 	void begin(void);
